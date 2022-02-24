@@ -1,0 +1,15 @@
+https://public.cyber.mil/stigs/   Be able to Stig a server this can teach you alot about Microsoft Security. Security Technical Implementation Guides.
+  https://public.cyber.mil/stigs/srg-stig-tools/    You will need the viewing tool to view any of the Stigs. 
+  https://public.cyber.mil/stigs/downloads/    Guides
+  https://public.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems  You can download a particular OS guide maybe Domain Controllers
+  Category 1 -3  Cat 1 is critical. Generally shows you what to do through CLI to verify, config and references NIST guides. 
+  
+ https://github.com/Invoke-IR/ForensicPosters
+ https://github.com/invoke-ir
+ http://www.invoke-ir.com
+ 
+ 
+ 
+ https://blueteampowershell.com/ 
+https://www.powershellgallery.com/ 
+http://www.softwarefx.com/powergadgets/; supposedly good graphic commandlets 

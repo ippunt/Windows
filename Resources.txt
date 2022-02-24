@@ -11,3 +11,6 @@ https://public.cyber.mil/stigs/   Be able to Stig a server this can teach you al
 https://blueteampowershell.com/ 
 https://www.powershellgallery.com/ 
 http://www.softwarefx.com/powergadgets/; supposedly good graphic commandlets 
+
+Cached domain accounts guide:
+http://woshub.com/cached-domain-logon-credentials-windows/#:~:text=When%20a%20domain%20user%20logs,is%20unplugged%20from%20the%20computer.

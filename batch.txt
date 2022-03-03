@@ -1,0 +1,59 @@
+1) Basics, Echo, pause 
+2)Check if file exist and run command 
+3) Go to and endA little more Sophisticated 
+
+ 
+
+1) 
+
+Files should be given the .bat  extention 
+
+PAUSE; waits for user input to move along in script->Press any key to continue  . . . 
+
+@echo off; Do not display cmd screen unless script calls for it 
+
+ 
+
+2) 
+
+C:\Users\jdarling>if exist C:\windows ( Echo "Weehah" ) else ( echo "Nooha") 
+"Weehah" 
+C:\Users\jdarling>if exist C:\Linux ( Echo "Weehah" ) else ( echo "Nooha") 
+"Nooha" 
+
+ Uninstall: if exist C:\Path\to\applicationfile  Run-uninstaller 
+
+Remember System needs access to share and be able to install the software. Run as Computer.   
+
+Install: if exist C:\Path\to\app () else ( \\PathtoInstaller ); Ensure not installed.  
+
+ 
+
+3) 
+IF EXIST "c:\vcredist_2010_x86.txt" GOTO END 
+
+IF EXIST "c:\vcredist_2010_x64.txt" GOTO END 
+
+  
+
+:32-bit 
+
+if exist %SystemRoot%\SysWOW64 goto 64-bit 
+
+\\servername\sharename\C++Redist\2010\vcredist_2010_x86.exe /passive /norestart 
+
+echo "Installed Microsoft Visual C++ 2010 Redistributable - x86" > "c:\vcredist_2010_x86.txt" 
+
+goto END 
+
+  
+
+:64-bit 
+
+\\servername\sharename\C++Redist\2010\vcredist_2010_x64.exe /passive /norestart 
+
+echo "Installed Microsoft Visual C++ 2010 Redistributable - x64" > "c:\vcredist_2010_x64.txt" 
+
+  
+
+:END 

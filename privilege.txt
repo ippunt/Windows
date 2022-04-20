@@ -1,0 +1,6 @@
+1. Workstation changing IP address by local user or domain user. 
+
+
+1)
+net localgroup "Network Configuration Operators" "UserName" /ADD Gives access to network Interfaces, IPs, Disabling them
+net localgroup "Network Configuration Operators" "NetBiosDomainName\DomainUserName" /ADD 

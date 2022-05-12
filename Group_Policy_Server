@@ -1,0 +1,5 @@
+Local, Site, Domain, OU OU OU 
+
+Password policies are in default domain policy. Won't work elsewhere, not tested. 
+
+Filtering for computers is required for computer configuration 

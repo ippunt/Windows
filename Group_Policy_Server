@@ -4,3 +4,9 @@ Local, Site, Domain, OU OU OU
 Password policies are in default domain policy. Won't work elsewhere, not tested. 
 
 Filtering for computers is required for computer configuration 
+
+You can block inheritance for child OU. 
+
+You can also enforce on parents which removes the ability to block inheritance. If enforced all child OUs will accept. What happends with Enforced > Enforced? 
+
+Loopback processing mode if you need computer settings to override user GPO. 

@@ -7,6 +7,7 @@ Filtering for computers is required for computer configuration
 
 You can block inheritance for child OU. 
 
-You can also enforce on parents which removes the ability to block inheritance. If enforced all child OUs will accept. What happends with Enforced > Enforced? 
+You can also enforce on parents which removes the ability to block inheritance. If enforced all child OUs will accept. 
+    I believe the only way to get around is to create another enorced in same Parent OU and Lower GPO number in ranking. 
 
 Loopback processing mode if you need computer settings to override user GPO. 

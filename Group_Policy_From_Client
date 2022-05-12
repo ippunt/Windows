@@ -1,0 +1,7 @@
+Handy to see winning GPOs and see what is going on. 
+
+Gpupdate /F;
+Gpresult /R;  
+Gpresult /H C:\Test\myresult.html; Will not work directly into C. Permissions.  
+Gpresult /r /H C:\Test\Myresult.html          If you need user and computer "/r" 
+Gpresult /R /scope COMPUTER; see the local computers GPOs applied 

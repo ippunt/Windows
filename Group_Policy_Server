@@ -1,4 +1,5 @@
 Local, Site, Domain, OU OU OU 
+    Multiple GPO in out link order is 3,2,1. Lowest number in the OU wins. 
 
 Password policies are in default domain policy. Won't work elsewhere, not tested. 
 

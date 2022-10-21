@@ -11,3 +11,5 @@ runas /user:Computername\Administrator C:\Windows\System32\notepad.exe; Test to 
 runas /user:Computername\Administrator /savecred C:\Windows\System32\notepad.exe; You will need creds cached
 Right click anywhere on Desktop > New > ShortCut > 
 Target gets the above command.
+
+runas/user:domain\user notepad.exe; If a domain account local on PC. If solely local account computer is fine. If domain... domain. 

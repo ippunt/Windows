@@ -1,5 +1,6 @@
 1. Workstation changing IP address by local user or domain user. 
 2. Giving a user the abaility to run application as admin without giving user admin rights. 
+a. Move app and give user account permission on registry and Folders. Didn't work in my case but may.
 
 
 1)
@@ -13,3 +14,15 @@ Right click anywhere on Desktop > New > ShortCut >
 Target gets the above command.
 
 runas/user:domain\user notepad.exe; If a domain account local on PC. If solely local account computer is fine. If domain... domain. 
+
+a. 
+1) Move the Application to a folder outside "Program Files". E.g. make a folder named "User Apps" or something like this.
+2) Select the app folder properties (by clicking with right mouse button on it), go to "security" tab and press "edit" to change its permissions.
+3) Press "Add" and enter the name of the user you want to run the app. Press ok. 
+4) In "Permissions for -user name-" box, mark the checkboxes to give him full control (or just "modify") rights. Press OK and OK. Now your users application has the nessesary permisions to write to its folders.
+But the app may ask to write something in the systems registry. So, follow the next steps:
+5) Go to start and run "regedit". Inside Registry Editor click "Computer" and make a search ("ctrl-F") with the app name (e.g. "quake.exe"). Wait to find it.
+6) When you find some registry folder that is connected somehow with the app, press the right mouse button on it and select "permissions".
+7) Here you have to add the user name once more and give him the full control permission. Now his app can write to system registry.
+8)Go to the app shortcut you have created for the user, click properties and enable "always run as administrator".
+9) Done! Your user can run the Application without having you to give him admin rights!

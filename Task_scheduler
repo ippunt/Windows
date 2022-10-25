@@ -1,1 +1,9 @@
+1. Using SYSTEM account limitations in task scheduler
+2. Need other users to have access to task. Simply changing permissions does not cut it. 
+
+1.
 https://learn.microsoft.com/en-us/answers/questions/260530/windows-task-schedule-not-launching-application.html
+Gist: running task as System will only run it in the background. Not good for GUI apps that need foreground associated with user.
+
+2. Getting other users to be able to run a task
+https://social.technet.microsoft.com/Forums/windows/en-US/6b9b7ac3-41cd-419e-ac25-c15c45766c8e/scheduled-task-that-any-user-can-run

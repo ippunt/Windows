@@ -1,7 +1,7 @@
 1) Basics, Echo, pause 
 2)Check if file exist and run command 
 3) Go to and endA little more Sophisticated 
-
+4) logging
  
 
 1) 
@@ -57,3 +57,6 @@ echo "Installed Microsoft Visual C++ 2010 Redistributable - x64" > "c:\vcredist_
   
 
 :END 
+
+4)
+dir poop.key 2> err.msg 1> log.msg

@@ -1,20 +1,25 @@
 GPOs You may want:
 https://www.blumira.com/integration/disable-llmnr-netbios-wpad-lm-hash/
+      https://woshub.com/how-to-disable-netbios-over-tcpip-and-llmnr-using-gpo/
 
 
 
 
 
-
+https://woshub.com/how-to-disable-netbios-over-tcpip-and-llmnr-using-gpo/
 https://www.blumira.com/integration/disable-llmnr-netbios-wpad-lm-hash/
 Disable LLMNR
 Goto Computer Configuration -> Administrative Templates -> Network -> DNS Client
 Click on “Turn Off Multicast Name Resolution” and set it to “Enabled”
 Disable NetBios
 You can’t disable netbios directly within group policy, but there are a few different ways that you can..
-Via PowerShell
+Via PowerShell-
+$regkey = "HKLM:SYSTEM\CurrentControlSet\services\NetBT\Parameters\Interfaces"
+Get-ChildItem $regkey |foreach { Set-ItemProperty -Path "$regkey\$($_.pschildname)" -Name NetbiosOptions -Value 2 -Verbose}
+
 Via registry settings
 set-ItemProperty HKLM:\SYSTEM\CurrentControlSet\services\NetBT\Parameters\Interfaces\tcpip* -Name NetbiosOptions -Value 2
+The best option might be utilizing DHCP when address is assigned to interface. 
 Disable/Configure WPAD
 To disable WPAD you must turn off the automatic proxy configuration settings option in Internet Explorer
 In group policy, expend User Configuration>Administrative Templates>Windows Components>Internet Explorer>Disable changing Automatic Configuration settings

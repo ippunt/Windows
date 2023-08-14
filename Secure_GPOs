@@ -1,0 +1,26 @@
+GPOs You may want:
+https://www.blumira.com/integration/disable-llmnr-netbios-wpad-lm-hash/
+
+
+
+
+
+
+https://www.blumira.com/integration/disable-llmnr-netbios-wpad-lm-hash/
+Disable LLMNR
+Goto Computer Configuration -> Administrative Templates -> Network -> DNS Client
+Click on “Turn Off Multicast Name Resolution” and set it to “Enabled”
+Disable NetBios
+You can’t disable netbios directly within group policy, but there are a few different ways that you can..
+Via PowerShell
+Via registry settings
+set-ItemProperty HKLM:\SYSTEM\CurrentControlSet\services\NetBT\Parameters\Interfaces\tcpip* -Name NetbiosOptions -Value 2
+Disable/Configure WPAD
+To disable WPAD you must turn off the automatic proxy configuration settings option in Internet Explorer
+In group policy, expend User Configuration>Administrative Templates>Windows Components>Internet Explorer>Disable changing Automatic Configuration settings
+Another option is to configure WPAD, as this will make poisoning the entry impossible.
+Disable LM Hash
+If you are running an older forest functional level the LMhash is an older hash that is easily cracked that stores AD credentials which you can turn off using group policy.
+In Group Policy, expand Computer Configuration>Windows Settings>Security Settings>Local Policies>Security Options>Network security: Do not store LAN Manager hash value on next password change.
+
+

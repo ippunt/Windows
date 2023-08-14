@@ -20,7 +20,7 @@ Get-ChildItem $regkey |foreach { Set-ItemProperty -Path "$regkey\$($_.pschildnam
 Via registry settings
 set-ItemProperty HKLM:\SYSTEM\CurrentControlSet\services\NetBT\Parameters\Interfaces\tcpip* -Name NetbiosOptions -Value 2
 The best option might be utilizing DHCP when address is assigned to interface. 
-Option 43, Vendor Class Identifier MSFT 5.0, 01:04:00:00:00:02  form config seen  option 43 hex 1111.2222.3333
+Option 43, Vendor Class Identifier MSFT 5.0, 01:04:00:00:00:02  from config seen  option 43 hex 1111.2222.3333
 
 Disable/Configure WPAD
 To disable WPAD you must turn off the automatic proxy configuration settings option in Internet Explorer

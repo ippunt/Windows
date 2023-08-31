@@ -1,0 +1,2 @@
+Can't add a printer?
+  Try this: open cmd as admin > rundll32 printui.dll,PrintUIEntry /il
